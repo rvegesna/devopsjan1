@@ -1,0 +1,3 @@
+---
+# defaults file for webservers
+pkg: httpd

@@ -1,0 +1,9 @@
+---
+- hosts: server2.abc.com
+  remote_user: test
+  become: yes
+  roles:
+   - webservers
+   - geerlingguy.git
+
+

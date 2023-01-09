@@ -1,0 +1,14 @@
+---
+- hosts: server2.abc.com
+  remote_user: test
+  become: yes
+  tasks:
+    - name: install httpd package
+      yum: name={{item}} state=installed
+      with_items:
+        - curl
+        - httpd
+        - lynx
+      when: ansible_os_family != "RedHat"
+
+
